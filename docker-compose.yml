@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    image: mahoufarm-storage:latest
+    build: .
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+    volumes:
+      - "./static:/static"
