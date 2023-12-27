@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     def assemble_server_url(cls, v: Optional[str], values: Dict[str, Any]) -> Any:
         if isinstance(v, str):
             return v
-        return f"https://{values.get('SERVER_HOST')}:{values.get('SERVER_PORT')}{values.get('STATICFILES_ENDPOINT')}"
+        return f"https://{values.get('SERVER_HOST')}{values.get('STATICFILES_ENDPOINT')}"
     
     class Config:
         case_sensitive = True
